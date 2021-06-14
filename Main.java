@@ -2,31 +2,37 @@ package com.company;
 
 public class Main {
 
-    enum Level {
-        LOW,
-        MEDIUM,
-        HIGH
+    enum Semaphore{
+        RED,
+        YELLOW,
+        GREEN
     }
 
     public static void main(String[] args) {
 
-        Level myVar = Level.MEDIUM;
+        Semaphore semaphore = Semaphore.YELLOW;
 
-        SomeFunction(myVar);
+        System.out.println(semaphore);
+
+        SomeFunc(semaphore);
+
 
     }
 
-    public static void SomeFunction(Level level){
+    public static void SomeFunc(Semaphore semaphore){
 
-        switch(myVar) {
-            case LOW:
-                System.out.println("Low level");
+        switch(semaphore){
+
+            case RED:
+                System.out.println("RED");
                 break;
-            case MEDIUM:
-                System.out.println("Medium level");
+
+            case YELLOW:
+                System.out.println("YELLOW");
                 break;
-            case HIGH:
-                System.out.println("High level");
+
+            case GREEN:
+                System.out.println("GREEN");
                 break;
         }
 
